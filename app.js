@@ -16,7 +16,6 @@ var monk = require('monk');
 var db = monk(DATABASE_URI);
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 //for using stylus
