@@ -1,5 +1,5 @@
 {
-  "name": "nodetest1",
+  "name": "PronounceMe",
   "version": "1.0.0",
   "description": "Minimal node app",
   "main": "app.js",

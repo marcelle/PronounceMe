@@ -36,6 +36,7 @@ block content
           .col-md-4
             audio(controls='')
               source(src='/sounds/horse.ogg', type='audio/ogg')
+              source(src='/sounds/horse.mp3', type='audio/mpeg')
               | Your browser does not support the audio element.
     form(method="post",action="/deleteitem/#{item._id}").form-horizontal.pull-right
         button#delete.btn.btn-danger Delete
