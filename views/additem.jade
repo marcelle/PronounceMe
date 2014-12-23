@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    form#formAddUser(name="additem",method="post",action="/additem").form-horizontal
+      fieldset
+        // Form Name
+        legend Add Pronunciation
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='phrase') Phrase
+          .col-md-4
+            input#phraseinput.form-control.input-md(name='phrase', type='text', placeholder='phrase', required='')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='contributor') Contributor
+          .col-md-4
+            input#contributorinput.form-control.input-md(name='contributor', type='text', placeholder='your name', required='')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='language') Language
+          .col-md-4
+            input#languageinput.form-control.input-md(name='language', type='text', placeholder='language', required='')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='region') Region / Dialect
+          .col-md-4
+            input#regioninput.form-control.input-md(name='region', type='text', placeholder='region or dialect', required='')
+        // Textarea
+        .form-group
+          label.col-md-4.control-label(for='comment') Comment
+          .col-md-4
+            textarea#commentsinput.form-control(name='comment')
+        // File Button
+        .form-group
+          label.col-md-4.control-label(for='file') Audio File
+          .col-md-4
+            input#filebutton.input-file(name='file', type='file')
+        // Button
+        .form-group
+          label.col-md-4.control-label(for='submit')
+          .col-md-4
+            button#submit.btn.btn-primary(name='submit') Add Phrase

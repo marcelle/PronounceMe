@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    if q
+        h1 Search Results
+        h2 "#{q}"
+    else
+        h1 All Pronunciations
+    
+    each item, index in results
+        li
+            a(href="viewitem/#{item._id}") #{item.phrase}

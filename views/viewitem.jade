@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    form.form-horizontal
+      fieldset
+        // Form Name
+        legend View Pronunciation
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='phrase') Phrase
+          .col-md-4
+            input.form-control.input-md(readonly='', value='#{item.phrase}')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='contributor') Contributor
+          .col-md-4
+            input.form-control.input-md(readonly='', value='#{item.contributor}')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='language') Language
+          .col-md-4
+            input.form-control.input-md(readonly='', value='#{item.language}')
+        // Text input
+        .form-group
+          label.col-md-4.control-label(for='region') Region / Dialect
+          .col-md-4
+            input.form-control.input-md(readonly='', value='#{item.region}')
+        // Textarea
+        .form-group
+          label.col-md-4.control-label(for='comment') Comment
+          .col-md-4
+            textarea.form-control(readonly='', value='#{item.comment}')
+        // File Button
+        .form-group
+          label.col-md-4.control-label(for='file') Audio File
+          .col-md-4
+            audio(controls='')
+              source(src='/sounds/horse.ogg', type='audio/ogg')
+              | Your browser does not support the audio element.
+    form(method="post",action="/deleteitem/#{item._id}").form-horizontal.pull-right
+        button#delete.btn.btn-danger Delete
